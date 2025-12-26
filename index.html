@@ -144,62 +144,25 @@
     </section>
 
     <!-- PROJELERİM -->
+    <!-- PROJELERİM (GITHUB API) -->
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="mb-16">
-            <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">Seçili Projeler</h2>
-            <div class="h-2 w-24 bg-brand mt-4"></div>
+        <div class="mb-16 flex justify-between items-end">
+            <div>
+                <h2 class="text-4xl font-bold text-brand tracking-widest">Projelerim</h2>
+            </div>
+            <a href="https://github.com/KULLANICI_ADINIZ" target="_blank"
+                class="text-sm font-bold uppercase border-b-2 border-brand pb-1 hover:text-brand transition">Tümünü
+                Gör</a>
         </div>
-       
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Proje 1 -->
-            <div class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand/20 transition-all duration-500">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="E-Ticaret" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-                <div class="p-8">
-                    <span class="text-brand font-bold text-xs uppercase tracking-widest">Web Uygulaması</span>
-                    <h3 class="text-2xl font-black mt-2 mb-4 uppercase italic">Vortex Dashboard</h3>
-                    <p class="text-neutral-500 dark:text-neutral-400 text-sm mb-6">Finansal verileri gerçek zamanlı takip eden modern bir admin paneli tasarımı.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">React</span>
-                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">Tailwind</span>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Proje 2 -->
-            <div class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand/20 transition-all duration-500">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800" alt="Finans" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <!-- Projelerin Geleceği Alan -->
+        <div id="github-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Yükleniyor Yazısı / Skeleton -->
+            <div class="col-span-full text-center py-20">
+                <div
+                    class="animate-spin inline-block w-10 h-10 border-4 border-brand border-t-transparent rounded-full mb-4">
                 </div>
-                <div class="p-8">
-                    <span class="text-brand font-bold text-xs uppercase tracking-widest">Mobil Uyumlu</span>
-                    <h3 class="text-2xl font-black mt-2 mb-4 uppercase italic">Zen Finance</h3>
-                    <p class="text-neutral-500 dark:text-neutral-400 text-sm mb-6">Kişisel bütçe yönetimi için yapay zeka destekli minimalist bir çözüm.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">Next.js</span>
-                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">AI API</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proje 3 -->
-            <div class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand/20 transition-all duration-500">
-                <div class="relative h-60 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800" alt="Portfolyo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-                <div class="p-8">
-                    <span class="text-brand font-bold text-xs uppercase tracking-widest">UI/UX Design</span>
-                    <h3 class="text-2xl font-black mt-2 mb-4 uppercase italic">Minimal Folio</h3>
-                    <p class="text-neutral-500 dark:text-neutral-400 text-sm mb-6">Tasarımcılar için ızgara tabanlı, yüksek kontrastlı portfolyo şablonu.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">Figma</span>
-                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">HTML5</span>
-                    </div>
-                </div>
+                <p class="font-bold uppercase tracking-widest opacity-50 text-neutral-500">Projeler Yükleniyor...</p>
             </div>
         </div>
     </section>
@@ -435,6 +398,89 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // --- GITHUB API FETCH ---
+        // 1. AYARLAR
+        const username = 'sulooo71';
+
+        // 2. ÖZEL GÖRSEL EŞLEŞTİRME LİSTESİ
+        // Buraya GitHub'daki depo adını (tam olarak neyse) ve karşısına resim yolunu yaz.
+        const repoGorselleri = {
+            "Sl3s-v1": "img/sl3s.jpg",        // Yerel dosya örneği
+            "depo-adi-2": "https://site.com/resim.png", // İnternet linki örneği
+            "react-projem": "assets/img/kapak.png"
+        };
+
+        // Eğer listede adı geçmeyen bir repo çekilirse görünecek varsayılan resim
+        const varsayilanGorsel = "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=800";
+
+        async function fetchGitHubRepos() {
+            const container = document.getElementById('github-projects');
+
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+
+                if (!response.ok) throw new Error('Veri alınamadı');
+
+                const repos = await response.json();
+
+                // Yükleniyor alanını temizle
+                container.innerHTML = '';
+
+                repos.forEach(repo => {
+                    // Veri hazırlama
+                    const description = repo.description || "Bu proje için bir açıklama bulunmuyor.";
+                    const language = repo.language || "Kod";
+
+                    // --- GÖRSEL SEÇİM MANTIĞI ---
+                    // Eğer repo adı bizim listemizde (repoGorselleri) varsa onu al, yoksa varsayılanı al.
+                    const kapakResmi = repoGorselleri[repo.name] || varsayilanGorsel;
+
+                    // Repo Kartı Oluşturma
+                    const repoCard = `
+                <div class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand/20 transition-all duration-500 flex flex-col">
+                    
+                    <!-- Görsel Alanı -->
+                    <div class="relative h-48 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                        <img src="${kapakResmi}" 
+                             alt="${repo.name}" 
+                             class="w-full h-full object-cover transition-transform duration-700">
+                        
+                        <!-- Yıldız Sayısı -->
+                        <div class="absolute top-4 right-4 bg-black/50 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold text-white flex items-center gap-1">
+                            <i class="ri-star-fill text-yellow-400"></i> ${repo.stargazers_count}
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="text-brand font-bold text-xs uppercase tracking-widest">${language}</span>
+                        <h3 class="text-2xl font-black mt-2 mb-4 uppercase italic truncate">${repo.name.replace(/-/g, ' ')}</h3>
+                        <p class="text-neutral-500 dark:text-neutral-400 text-sm mb-6 line-clamp-2 flex-grow">${description}</p>
+                        
+                        <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex justify-between items-center">
+                            <a href="${repo.html_url}" target="_blank" class="flex items-center gap-2 font-black text-xs uppercase tracking-tighter hover:text-brand transition">
+                                Kaynak Kodu <i class="ri-github-line"></i>
+                            </a>
+                            ${repo.homepage ? `
+                            <a href="${repo.homepage}" target="_blank" class="flex items-center gap-2 font-black text-xs uppercase tracking-tighter text-brand hover:underline">
+                                Canlı Demo <i class="ri-external-link-line"></i>
+                            </a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+                    container.innerHTML += repoCard;
+                });
+
+            } catch (error) {
+                console.error('Hata:', error);
+                container.innerHTML = `<p class="col-span-full text-center text-red-500 font-bold uppercase italic">Projeler yüklenirken bir hata oluştu.</p>`;
+            }
+        }
+
+        // Fonksiyonu çalıştır
+        fetchGitHubRepos();
+
     </script>
 </body>
 
