@@ -142,7 +142,6 @@
         </div>
     </nav>
 
-
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-brand/15 dark:bg-cyan/30 rounded-full blur-[80px] md:blur-[100px] -z-10"></div>
 
@@ -463,3 +462,158 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+            document.onkeydown = function(e) {
+            // F12 tuşu
+            if(e.keyCode == 123) {
+            return false;
+            }
+            // CTRL+I (İncele)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+            return false;
+            }
+            // CTRL+J (Konsol)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+            return false;
+            }
+            // CTRL+U (Kaynağı Görüntüle)
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+            return false;
+            }
+            // CTRL+S (Kaydet)
+            if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){ // Mac için event.metaKey de eklenebilir
+            return false;
+            }
+            }
+
+        document.addEventListener('contextmenu', event => {
+        event.preventDefault();
+        });
+
+                // --- 2. ÇEREZ (COOKIE) BİLDİRİMİ ---
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const declineBtn = document.getElementById('decline-cookies');
+
+        // Çerez tercihi daha önce yapılmamışsa göster
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieBanner.classList.remove('hidden');
+            setTimeout(() => {
+                cookieBanner.classList.remove('translate-y-20', 'opacity-0');
+            }, 1000); // 1 saniye sonra animasyonla gelsin
+        }
+
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            closeBanner();
+        });
+
+        declineBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            closeBanner();
+        });
+
+        function closeBanner() {
+            cookieBanner.classList.add('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                cookieBanner.classList.add('hidden');
+            }, 500);
+        }
+
+        // --- 3. DİĞER SCRIPTLER (Menü, Tema, Modal) ---
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuIcon.classList.replace('ri-menu-4-line', 'ri-close-large-line');
+                document.body.classList.add('overflow-hidden-important');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.classList.replace('ri-close-large-line', 'ri-menu-4-line');
+                document.body.classList.remove('overflow-hidden-important');
+            }
+        }
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', () => { if(isMenuOpen) toggleMenu(); }));
+
+        
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        const modal = document.getElementById('project-modal');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const modalCard = document.getElementById('modal-card');
+        const mTitle = document.getElementById('modal-title');
+        const mDate = document.getElementById('modal-date');
+        const mImg = document.getElementById('modal-img');
+        const mDesc = document.getElementById('modal-desc');
+        const mLink = document.getElementById('modal-link');
+
+        function openModal(title, date, imgSrc, desc, linkUrl) {
+            mTitle.innerText = title;
+            mDate.innerText = date;
+            mImg.src = imgSrc;
+            mDesc.innerText = desc;
+            mLink.href = linkUrl;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalBackdrop.classList.remove('opacity-0');
+                modalCard.classList.remove('scale-95', 'opacity-0');
+                modalCard.classList.add('scale-100', 'opacity-100');
+            }, 50);
+        }
+        function closeModal() {
+            modalBackdrop.classList.add('opacity-0');
+            modalCard.classList.remove('scale-100', 'opacity-100');
+            modalCard.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+        // 1. Menüyü Ekrana Getir
+        mobileMenu.classList.remove('translate-x-full');
+        
+        // 2. İkonu SİL ve yerine ÇARPI (X) koy
+        menuIcon.classList.remove('ri-menu-4-line');
+        menuIcon.classList.add('ri-close-line');
+        
+        // 3. Sayfa kaydırmayı kilitle
+        document.body.style.overflow = 'hidden';
+    } else {
+        // 1. Menüyü Gizle
+        mobileMenu.classList.add('translate-x-full');
+        
+        // 2. İkonu SİL ve yerine MENÜ koy
+        menuIcon.classList.remove('ri-close-line');
+        menuIcon.classList.add('ri-menu-4-line');
+        
+        // 3. Sayfa kaydırmayı aç
+        document.body.style.overflow = 'auto';
+    }
+}
+
+    </script>
