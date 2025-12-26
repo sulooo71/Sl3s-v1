@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLO | Yaratıcı Portfolyo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- İkonlar -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+   
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#2563eb', // Canlı mavi
+                        dark: '#050505',  // Simsiyah
+                        cardDark: '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .bg-grid-pattern {
+                background-size: 120px 120px;
+                background-image:
+                    linear-gradient(to right, rgba(0,0,0,0.10) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,0.10) 1px, transparent 1px);
+            }
+            .dark .bg-grid-pattern {
+                background-image:
+                    linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+            }
+            .overflow-hidden-important {
+                overflow: hidden !important;
+            }
+        }
+    </style>
+</head>
