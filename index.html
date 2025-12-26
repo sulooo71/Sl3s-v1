@@ -145,55 +145,60 @@
 
     <!-- PROJELERİM -->
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-brand tracking-widest">Bazı Projelerim</h2>
-            <span class="block mt-3 text-sm text-neutral-500">Detaylar için projelere tıklayın ↓</span>
+        <div class="mb-16">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">Seçili Projeler</h2>
+            <div class="h-2 w-24 bg-brand mt-4"></div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+       
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <!-- Proje 1 -->
-            <div onclick="openModal('E-Ticaret Dashboard', '2024', 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000', 'React tabanlı, tam kapsamlı bir yönetim paneli. Stok takibi, sipariş yönetimi ve analitik raporlar içerir.', '#')"
-                class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150">
+            <div class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand/20 transition-all duration-500">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="E-Ticaret" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors">E-Ticaret Kontrol Paneli
-                </h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">React, Tailwind, Recharts
-                    kullanarak geliştirdiğim modern admin paneli.</p>
-                <div
-                    class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
-                    İncele <i class="ri-arrow-right-line ml-2"></i>
+                <div class="p-8">
+                    <span class="text-brand font-bold text-xs uppercase tracking-widest">Web Uygulaması</span>
+                    <h3 class="text-2xl font-black mt-2 mb-4 uppercase italic">Vortex Dashboard</h3>
+                    <p class="text-neutral-500 dark:text-neutral-400 text-sm mb-6">Finansal verileri gerçek zamanlı takip eden modern bir admin paneli tasarımı.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">React</span>
+                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">Tailwind</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Proje 2 -->
-            <div onclick="openModal('Finans Uygulaması', '2023', 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000', 'Kişisel harcamaları yapay zeka ile analiz eden mobil uyumlu web uygulaması.', '#')"
-                class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150">
+            <div class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand/20 transition-all duration-500">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800" alt="Finans" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors">Finans Uygulaması</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">Kişisel bütçe yönetimi için AI
-                    destekli modern arayüz.</p>
-                <div
-                    class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
-                    İncele <i class="ri-arrow-right-line ml-2"></i>
+                <div class="p-8">
+                    <span class="text-brand font-bold text-xs uppercase tracking-widest">Mobil Uyumlu</span>
+                    <h3 class="text-2xl font-black mt-2 mb-4 uppercase italic">Zen Finance</h3>
+                    <p class="text-neutral-500 dark:text-neutral-400 text-sm mb-6">Kişisel bütçe yönetimi için yapay zeka destekli minimalist bir çözüm.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">Next.js</span>
+                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">AI API</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Proje 3 -->
-            <div onclick="openModal('Minimal Portfolio', '2024', 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000', 'Tasarımcılar için özel olarak hazırlanmış, grid tabanlı portfolyo şablonu.', '#')"
-                class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150">
+            <div class="group bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-brand/20 transition-all duration-500">
+                <div class="relative h-60 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800" alt="Portfolyo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors">Portfolio Template</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">Minimalist ve karanlık mod
-                    destekli kişisel web sitesi.</p>
-                <div
-                    class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
-                    İncele <i class="ri-arrow-right-line ml-2"></i>
+                <div class="p-8">
+                    <span class="text-brand font-bold text-xs uppercase tracking-widest">UI/UX Design</span>
+                    <h3 class="text-2xl font-black mt-2 mb-4 uppercase italic">Minimal Folio</h3>
+                    <p class="text-neutral-500 dark:text-neutral-400 text-sm mb-6">Tasarımcılar için ızgara tabanlı, yüksek kontrastlı portfolyo şablonu.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">Figma</span>
+                        <span class="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-[10px] font-black uppercase">HTML5</span>
+                    </div>
                 </div>
             </div>
         </div>
