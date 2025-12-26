@@ -46,3 +46,98 @@
         }
     </style>
 </head>
+<body class="bg-white dark:bg-dark text-neutral-900 dark:text-neutral-200 bg-grid-pattern transition-colors duration-300 min-h-screen relative font-sans">
+
+    <!-- NAVBAR -->
+<!-- NAVBAR (GÜNCELLENMİŞ VE DÜZELTİLMİŞ) -->
+<nav class="fixed top-0 w-full z-[100] bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <!-- Logo (Z-Index ile en üstte) -->
+            <a href="#" class="text-3xl font-black tracking-tighter hover:text-brand transition-colors z-[110] relative">SLO.</a>
+
+            <!-- Desktop Linkler -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+                <a href="#about" class="hover:text-brand transition" data-i18n="nav_about">Hakkımda</a>
+                <a href="#projects" class="hover:text-brand transition" data-i18n="nav_projects">Bazı Projelerim</a>
+                <a href="#skills" class="hover:text-brand transition" data-i18n="nav_skills">Yetenekler</a>
+                <a href="#timeline" class="hover:text-brand transition" data-i18n="nav_exp">Deneyim</a>
+                <a href="contact.html" class="px-5 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black hover:opacity-80 transition" data-i18n="nav_contact">İletişim</a>
+            </div>
+
+            <!-- Sağ Taraf: Butonlar -->
+            <div class="flex items-center gap-4 z-[110] relative">
+                <!-- Dil Butonu -->
+                <button id="lang-toggle" class="text-sm font-bold font-mono border border-neutral-300 dark:border-neutral-700 px-3 py-1 rounded-md hover:border-brand hover:text-brand transition">
+                    TR
+                </button>
+
+                <!-- Tema Butonu -->
+                <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition">
+                    <i class="ri-moon-line dark:hidden"></i>
+                    <i class="ri-sun-line hidden dark:block text-yellow-400"></i>
+                </button>
+                
+                <!-- Mobil Menü Butonu (Z-Index En Yüksek - Çarpı Burada Görünecek) -->
+                <button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-3xl text-neutral-900 dark:text-white transition-transform duration-300 hover:text-brand">
+                    <i class="ri-menu-4-line" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil Menü (Tam Ekran) -->
+        <div id="mobile-menu" class="fixed inset-0 w-screen h-screen bg-white dark:bg-black z-[105] flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-transform duration-300 translate-x-full">
+            <a href="#about" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_about">Hakkımda</a>
+            <a href="#projects" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_projects">Bazı Projelerim</a>
+            <a href="#skills" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_skills">Yetenekler</a>
+            <a href="#timeline" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_exp">Deneyim</a>
+            <a href="contact.html" class="mobile-link text-brand transition-colors" data-i18n="nav_contact">İletişim</a>
+        </div>
+    </nav><body class="bg-white dark:bg-dark text-neutral-900 dark:text-neutral-200 bg-grid-pattern transition-colors duration-300 min-h-screen relative font-sans">
+
+    <!-- NAVBAR -->
+<!-- NAVBAR (GÜNCELLENMİŞ VE DÜZELTİLMİŞ) -->
+<nav class="fixed top-0 w-full z-[100] bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <!-- Logo (Z-Index ile en üstte) -->
+            <a href="#" class="text-3xl font-black tracking-tighter hover:text-brand transition-colors z-[110] relative">SLO.</a>
+
+            <!-- Desktop Linkler -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+                <a href="#about" class="hover:text-brand transition" data-i18n="nav_about">Hakkımda</a>
+                <a href="#projects" class="hover:text-brand transition" data-i18n="nav_projects">Bazı Projelerim</a>
+                <a href="#skills" class="hover:text-brand transition" data-i18n="nav_skills">Yetenekler</a>
+                <a href="#timeline" class="hover:text-brand transition" data-i18n="nav_exp">Deneyim</a>
+                <a href="contact.html" class="px-5 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black hover:opacity-80 transition" data-i18n="nav_contact">İletişim</a>
+            </div>
+
+            <!-- Sağ Taraf: Butonlar -->
+            <div class="flex items-center gap-4 z-[110] relative">
+                <!-- Dil Butonu -->
+                <button id="lang-toggle" class="text-sm font-bold font-mono border border-neutral-300 dark:border-neutral-700 px-3 py-1 rounded-md hover:border-brand hover:text-brand transition">
+                    TR
+                </button>
+
+                <!-- Tema Butonu -->
+                <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition">
+                    <i class="ri-moon-line dark:hidden"></i>
+                    <i class="ri-sun-line hidden dark:block text-yellow-400"></i>
+                </button>
+                
+                <!-- Mobil Menü Butonu (Z-Index En Yüksek - Çarpı Burada Görünecek) -->
+                <button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-3xl text-neutral-900 dark:text-white transition-transform duration-300 hover:text-brand">
+                    <i class="ri-menu-4-line" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil Menü (Tam Ekran) -->
+        <div id="mobile-menu" class="fixed inset-0 w-screen h-screen bg-white dark:bg-black z-[105] flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-transform duration-300 translate-x-full">
+            <a href="#about" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_about">Hakkımda</a>
+            <a href="#projects" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_projects">Bazı Projelerim</a>
+            <a href="#skills" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_skills">Yetenekler</a>
+            <a href="#timeline" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_exp">Deneyim</a>
+            <a href="contact.html" class="mobile-link text-brand transition-colors" data-i18n="nav_contact">İletişim</a>
+        </div>
+    </nav>
