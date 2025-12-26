@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- İkonlar -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-   
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -46,86 +47,97 @@
         }
     </style>
 </head>
-<body class="bg-white dark:bg-dark text-neutral-900 dark:text-neutral-200 bg-grid-pattern transition-colors duration-300 min-h-screen relative font-sans">
+
+<body
+    class="bg-white dark:bg-dark text-neutral-900 dark:text-neutral-200 bg-grid-pattern transition-colors duration-300 min-h-screen relative font-sans">
 
     <!-- NAVBAR -->
-<!-- NAVBAR (GÜNCELLENMİŞ VE DÜZELTİLMİŞ) -->
-<nav class="fixed top-0 w-full z-[100] bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-all duration-300">
+    <nav
+        class="fixed top-0 w-full z-[100] bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            
-            <!-- Logo (Z-Index ile en üstte) -->
-            <a href="#" class="text-3xl font-black tracking-tighter hover:text-brand transition-colors z-[110] relative">SLO.</a>
+
+            <!-- Logo -->
+            <a href="#"
+                class="text-3xl font-black tracking-tighter hover:text-brand transition-colors z-[110] relative">SLO.</a>
 
             <!-- Desktop Linkler -->
             <div class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
-                <a href="#about" class="hover:text-brand transition" data-i18n="nav_about">Hakkımda</a>
-                <a href="#projects" class="hover:text-brand transition" data-i18n="nav_projects">Bazı Projelerim</a>
-                <a href="#skills" class="hover:text-brand transition" data-i18n="nav_skills">Yetenekler</a>
-                <a href="#timeline" class="hover:text-brand transition" data-i18n="nav_exp">Deneyim</a>
-                <a href="contact.html" class="px-5 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black hover:opacity-80 transition" data-i18n="nav_contact">İletişim</a>
+                <a href="#about" class="hover:text-brand transition">Hakkımda</a>
+                <a href="#projects" class="hover:text-brand transition">Bazı Projelerim</a>
+                <a href="#skills" class="hover:text-brand transition">Yetenekler</a>
+                <a href="#timeline" class="hover:text-brand transition">Deneyim</a>
+                <a href="contact.html"
+                    class="px-5 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black hover:opacity-80 transition">İletişim</a>
             </div>
 
             <!-- Sağ Taraf: Butonlar -->
             <div class="flex items-center gap-4 z-[110] relative">
-                <!-- Dil Butonu -->
-                <button id="lang-toggle" class="text-sm font-bold font-mono border border-neutral-300 dark:border-neutral-700 px-3 py-1 rounded-md hover:border-brand hover:text-brand transition">
-                    TR
-                </button>
-
                 <!-- Tema Butonu -->
-                <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition">
                     <i class="ri-moon-line dark:hidden"></i>
                     <i class="ri-sun-line hidden dark:block text-yellow-400"></i>
                 </button>
-                
-                <!-- Mobil Menü Butonu (Z-Index En Yüksek - Çarpı Burada Görünecek) -->
-                <button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-3xl text-neutral-900 dark:text-white transition-transform duration-300 hover:text-brand">
+
+                <!-- Mobil Menü Butonu -->
+                <button id="menu-btn"
+                    class="md:hidden w-10 h-10 flex items-center justify-center text-3xl text-neutral-900 dark:text-white transition-transform duration-300 hover:text-brand">
                     <i class="ri-menu-4-line" id="menu-icon"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobil Menü (Tam Ekran) -->
-        <div id="mobile-menu" class="fixed inset-0 w-screen h-screen bg-white dark:bg-black z-[105] flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-transform duration-300 translate-x-full">
-            <a href="#about" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_about">Hakkımda</a>
-            <a href="#projects" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_projects">Bazı Projelerim</a>
-            <a href="#skills" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_skills">Yetenekler</a>
-            <a href="#timeline" class="mobile-link hover:text-brand transition-colors" data-i18n="nav_exp">Deneyim</a>
-            <a href="contact.html" class="mobile-link text-brand transition-colors" data-i18n="nav_contact">İletişim</a>
+        <!-- Mobil Menü -->
+        <div id="mobile-menu"
+            class="fixed inset-0 w-screen h-screen bg-white dark:bg-black z-[105] flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-transform duration-300 translate-x-full">
+            <a href="#about" class="mobile-link hover:text-brand transition-colors">Hakkımda</a>
+            <a href="#projects" class="mobile-link hover:text-brand transition-colors">Bazı Projelerim</a>
+            <a href="#skills" class="mobile-link hover:text-brand transition-colors">Yetenekler</a>
+            <a href="#timeline" class="mobile-link hover:text-brand transition-colors">Deneyim</a>
+            <a href="contact.html" class="mobile-link text-brand transition-colors">İletişim</a>
         </div>
     </nav>
 
     <!-- HERO HEADER -->
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-brand/15 dark:bg-cyan/30 rounded-full blur-[80px] md:blur-[100px] -z-10"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-brand/15 dark:bg-cyan/30 rounded-full blur-[80px] md:blur-[100px] -z-10">
+        </div>
 
-        <h1 class="text-6xl md:text-9xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-600">
-            <span data-i18n="hero_title1">DİJİTAL</span> <br> <span data-i18n="hero_title2">MİMAR.</span>
+        <h1
+            class="text-6xl md:text-9xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-600 uppercase">
+            Dijital <br> Mimar.
         </h1>
-        <p class="max-w-xl text-neutral-600 dark:text-neutral-400 text-lg md:text-xl mb-10 leading-relaxed" data-i18n="hero_desc">
+        <p class="max-w-xl text-neutral-600 dark:text-neutral-400 text-lg md:text-xl mb-10 leading-relaxed">
             Merhaba, ben SLO. Karmaşık fikirleri minimalist ve işlevsel web deneyimlerine dönüştürüyorum.
         </p>
         <div class="flex flex-col md:flex-row gap-4">
-            <a href="#projects" class="bg-black dark:bg-white text-white dark:text-black px-10 py-4 rounded-lg font-bold hover:scale-105 transition-transform shadow-xl shadow-brand/10" data-i18n="hero_btn">Projelerimi İncele</a>
+            <a href="#projects"
+                class="bg-black dark:bg-white text-white dark:text-black px-10 py-4 rounded-lg font-bold hover:scale-105 transition-transform shadow-xl shadow-brand/10">Projelerimi
+                İncele</a>
         </div>
     </header>
 
     <!-- HAKKIMDA -->
     <section id="about" class="py-24 px-6 max-w-4xl mx-auto text-center relative z-20">
-        <h2 class="text-4xl font-bold text-brand tracking-widest mb-6" data-i18n="about_title">Hakkımda</h2>
-        <p class="text-2xl md:text-3xl leading-snug font-medium text-neutral-800 dark:text-neutral-200" data-i18n="about_desc">
-            Tasarım ve kodlama arasındaki boşluğu dolduruyorum. Her pikselin bir amacı olduğuna inanıyor, <span class="text-brand">performans</span> ve <span class="text-brand">estetiği</span> aynı potada eritiyorum.
+        <h2 class="text-4xl font-bold text-brand tracking-widest mb-6">Hakkımda</h2>
+        <p class="text-2xl md:text-3xl leading-snug font-medium text-neutral-800 dark:text-neutral-200">
+            Tasarım ve kodlama arasındaki boşluğu dolduruyorum. Her pikselin bir amacı olduğuna inanıyor, <span
+                class="text-brand">performans</span> ve <span class="text-brand">estetiği</span> aynı potada eritiyorum.
         </p>
-        
+
         <!-- Sosyal Medya İkonları -->
         <div class="mt-8 flex justify-center gap-6 text-3xl text-neutral-400">
-            <a href="https://github.com" target="_blank" class="hover:text-black dark:hover:text-white transition-colors hover:scale-110 transform duration-300">
+            <a href="#" target="_blank"
+                class="hover:text-black dark:hover:text-white transition-colors hover:scale-110 transform duration-300">
                 <i class="ri-github-fill"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" class="hover:text-blue-600 transition-colors hover:scale-110 transform duration-300">
+            <a href="#" target="_blank"
+                class="hover:text-blue-600 transition-colors hover:scale-110 transform duration-300">
                 <i class="ri-linkedin-fill"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" class="hover:text-pink-500 transition-colors hover:scale-110 transform duration-300">
+            <a href="#" target="_blank"
+                class="hover:text-pink-500 transition-colors hover:scale-110 transform duration-300">
                 <i class="ri-instagram-line"></i>
             </a>
         </div>
@@ -134,147 +146,133 @@
     <!-- PROJELERİM -->
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-brand tracking-widest" data-i18n="projects_title">Bazı Projelerim</h2>
-            <span class="block mt-3 text-sm text-neutral-500" data-i18n="projects_subtitle">Detaylar için projelere tıklayın ↓</span>
+            <h2 class="text-4xl font-bold text-brand tracking-widest">Bazı Projelerim</h2>
+            <span class="block mt-3 text-sm text-neutral-500">Detaylar için projelere tıklayın ↓</span>
         </div>
-       
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Proje 1 -->
             <div onclick="openModal('E-Ticaret Dashboard', '2024', 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000', 'React tabanlı, tam kapsamlı bir yönetim paneli. Stok takibi, sipariş yönetimi ve analitik raporlar içerir.', '#')"
-                 class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150"></div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors" data-i18n="p1b">E-Ticaret Kontrol Paneli</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2" data-i18n="p1a">React, Tailwind, Recharts kullanarak geliştirdiğim modern admin paneli.</p>
-                <div class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
-                    <span data-i18n="btn_inspect">İncele</span> <i class="ri-arrow-right-line ml-2"></i>
+                class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150">
+                </div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors">E-Ticaret Kontrol Paneli
+                </h3>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">React, Tailwind, Recharts
+                    kullanarak geliştirdiğim modern admin paneli.</p>
+                <div
+                    class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
+                    İncele <i class="ri-arrow-right-line ml-2"></i>
                 </div>
             </div>
 
             <!-- Proje 2 -->
             <div onclick="openModal('Finans Uygulaması', '2023', 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000', 'Kişisel harcamaları yapay zeka ile analiz eden mobil uyumlu web uygulaması.', '#')"
-                 class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150"></div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors" data-i18n="p2b">Finans Uygulaması</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2" data-i18n="p2a">Kişisel bütçe yönetimi için AI destekli modern arayüz.</p>
-                <div class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
-                    <span data-i18n="btn_inspect">İncele</span> <i class="ri-arrow-right-line ml-2"></i>
+                class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150">
+                </div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors">Finans Uygulaması</h3>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">Kişisel bütçe yönetimi için AI
+                    destekli modern arayüz.</p>
+                <div
+                    class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
+                    İncele <i class="ri-arrow-right-line ml-2"></i>
                 </div>
             </div>
 
             <!-- Proje 3 -->
             <div onclick="openModal('Minimal Portfolio', '2024', 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000', 'Tasarımcılar için özel olarak hazırlanmış, grid tabanlı portfolyo şablonu.', '#')"
-                 class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150"></div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors" data-i18n="p3b">Portfolio Template</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2" data-i18n="p3a">Minimalist ve karanlık mod destekli kişisel web sitesi.</p>
-                <div class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
-                    <span data-i18n="btn_inspect">İncele</span> <i class="ri-arrow-right-line ml-2"></i>
+                class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150">
+                </div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors">Portfolio Template</h3>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">Minimalist ve karanlık mod
+                    destekli kişisel web sitesi.</p>
+                <div
+                    class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
+                    İncele <i class="ri-arrow-right-line ml-2"></i>
                 </div>
             </div>
-
-             <!-- Proje 4 -->
-             <div onclick="openModal('Kurumsal Kimlik', '2022', 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1000', 'Global bir lojistik firması için hazırlanan kurumsal web sitesi ve marka kimliği çalışması.', '#')"
-             class="group cursor-pointer bg-white/40 dark:bg-cardDark p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brand/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-16 h-16 bg-brand/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150"></div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-brand transition-colors" data-i18n="p4b">Kurumsal Web</h3>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2" data-i18n="p4a">Lojistik firması için çok dilli kurumsal yapı.</p>
-                <div class="mt-6 flex items-center text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-brand transition-colors">
-                    <span data-i18n="btn_inspect">İncele</span> <i class="ri-arrow-right-line ml-2"></i>
-                </div>
-            </div>
+        </div>
     </section>
 
     <!-- YETENEKLERİM -->
     <section id="skills" class="py-24 px-6 border-neutral-200 dark:border-neutral-800 relative overflow-hidden">
         <div class="max-w-5xl mx-auto text-center">
-
-            <h2 class="text-4xl font-bold text-brand tracking-widest mb-16 text-center" data-i18n="skills_title">Yeteneklerim</h2>
-           
+            <h2 class="text-4xl font-bold text-brand tracking-widest mb-16 text-center">Yeteneklerim</h2>
             <div class="flex flex-wrap justify-center gap-4 md:gap-6">
-                <!-- Skill Items (Aynı Kalıyor - İsimler Evrensel) -->
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-javascript-fill text-2xl text-yellow-500 group-hover:scale-110 transition-transform"></i>
+                <div
+                    class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
+                    <i
+                        class="ri-javascript-fill text-2xl text-yellow-500 group-hover:scale-110 transition-transform"></i>
                     <span class="font-bold text-neutral-700 dark:text-neutral-200">JavaScript</span>
                 </div>
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-reactjs-line text-2xl text-blue-400 group-hover:rotate-180 transition-transform duration-700"></i>
+                <div
+                    class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
+                    <i
+                        class="ri-reactjs-line text-2xl text-blue-400 group-hover:rotate-180 transition-transform duration-700"></i>
                     <span class="font-bold text-neutral-700 dark:text-neutral-200">React.js</span>
                 </div>
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-nextjs-fill text-2xl text-black dark:text-white group-hover:scale-110 transition-transform"></i>
+                <div
+                    class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
+                    <i
+                        class="ri-nextjs-fill text-2xl text-black dark:text-white group-hover:scale-110 transition-transform"></i>
                     <span class="font-bold text-neutral-700 dark:text-neutral-200">Next.js</span>
                 </div>
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-tailwind-css-fill text-2xl text-cyan-400 group-hover:scale-110 transition-transform"></i>
+                <div
+                    class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
+                    <i
+                        class="ri-tailwind-css-fill text-2xl text-cyan-400 group-hover:scale-110 transition-transform"></i>
                     <span class="font-bold text-neutral-700 dark:text-neutral-200">Tailwind CSS</span>
-                </div>
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-nodejs-line text-2xl text-green-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="font-bold text-neutral-700 dark:text-neutral-200">Node.js</span>
-                </div>
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-pen-nib-fill text-2xl text-purple-500 group-hover:rotate-12 transition-transform"></i>
-                    <span class="font-bold text-neutral-700 dark:text-neutral-200">UI/UX Design</span>
-                </div>
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-git-merge-line text-2xl text-orange-600 group-hover:scale-110 transition-transform"></i>
-                    <span class="font-bold text-neutral-700 dark:text-neutral-200">Git & GitHub</span>
-                </div>
-                <div class="group flex items-center gap-3 px-6 py-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-brand/20 hover:border-brand dark:hover:border-brand hover:-translate-y-1 transition-all duration-300 cursor-default">
-                    <i class="ri-database-2-line text-2xl text-neutral-500 group-hover:text-brand transition-colors"></i>
-                    <span class="font-bold text-neutral-700 dark:text-neutral-200">SQL</span>
                 </div>
             </div>
         </div>
     </section>
-    <br id="timeline" >
-    <!-- KARİYER (TIMELINE) -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold text-brand tracking-widest mb-16 text-center" data-i18n="career_title">Kariyerim</h2>
+
+    <!-- KARİYER -->
+    <section id="timeline" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-brand tracking-widest mb-16 text-center">Kariyerim</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-            <!-- İş Deneyimi -->
             <div>
                 <div class="flex items-center gap-3 mb-8">
-                    <span class="p-3 rounded-full bg-brand/10 text-brand"><i class="ri-briefcase-fill text-2xl"></i></span>
-                    <h3 class="text-2xl font-bold" data-i18n="job_title">İş Deneyimi</h3>
+                    <span class="p-3 rounded-full bg-brand/10 text-brand"><i
+                            class="ri-briefcase-fill text-2xl"></i></span>
+                    <h3 class="text-2xl font-bold">İş Deneyimi</h3>
                 </div>
                 <div class="border-l-2 border-neutral-200 dark:border-neutral-800 ml-5 space-y-12">
                     <div class="relative pl-8 group">
-                        <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white dark:border-dark bg-neutral-300 dark:bg-neutral-700 group-hover:bg-brand transition-colors duration-300"></div>
-                        <span class="inline-block px-3 py-1 mb-2 text-xs font-bold text-brand bg-brand/10 rounded-full font-mono" data-i18n="job1_date">2023 - Günümüz</span>
-                        <h4 class="text-xl font-bold" data>Senior Frontend Developer</h4>
+                        <div
+                            class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white dark:border-dark bg-neutral-300 dark:bg-neutral-700 group-hover:bg-brand transition-colors duration-300">
+                        </div>
+                        <span
+                            class="inline-block px-3 py-1 mb-2 text-xs font-bold text-brand bg-brand/10 rounded-full font-mono">2023
+                            - Günümüz</span>
+                        <h4 class="text-xl font-bold">Senior Frontend Developer</h4>
                         <p class="text-sm font-medium text-neutral-500 mb-2">TechCorp Inc.</p>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed" data-i18n="job1_desc">Büyük ölçekli web uygulamaları için performans optimizasyonu ve bileşen kütüphanesi liderliği.</p>
-                    </div>
-                    <div class="relative pl-8 group">
-                        <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white dark:border-dark bg-neutral-300 dark:bg-neutral-700 group-hover:bg-brand transition-colors duration-300"></div>
-                        <span class="inline-block px-3 py-1 mb-2 text-xs font-bold text-neutral-500 bg-neutral-100 dark:bg-neutral-800 rounded-full font-mono">2021 - 2023</span>
-                        <h4 class="text-xl font-bold">Freelance Full Stack</h4>
-                        <p class="text-sm font-medium text-neutral-500 mb-2">Global (Remote)</p>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed" data-i18n="job2_desc">Upwork üzerinden uluslararası müşterilere 30+ proje teslimi.</p>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">Büyük ölçekli web uygulamaları
+                            için performans optimizasyonu.</p>
                     </div>
                 </div>
             </div>
-            <!-- Eğitim -->
             <div>
                 <div class="flex items-center gap-3 mb-8">
-                    <span class="p-3 rounded-full bg-purple-500/10 text-purple-600"><i class="ri-graduation-cap-fill text-2xl"></i></span>
-                    <h3 class="text-2xl font-bold" data-i18n="edu_title">Eğitim</h3>
+                    <span class="p-3 rounded-full bg-purple-500/10 text-purple-600"><i
+                            class="ri-graduation-cap-fill text-2xl"></i></span>
+                    <h3 class="text-2xl font-bold">Eğitim</h3>
                 </div>
                 <div class="border-l-2 border-neutral-200 dark:border-neutral-800 ml-5 space-y-12">
                     <div class="relative pl-8 group">
-                        <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white dark:border-dark bg-neutral-300 dark:bg-neutral-700 group-hover:bg-purple-600 transition-colors duration-300"></div>
-                        <span class="inline-block px-3 py-1 mb-2 text-xs font-bold text-purple-600 bg-purple-500/10 rounded-full font-mono">2017 - 2021</span>
-                        <h4 class="text-xl font-bold" data-i18n="edu1_name">Bilgisayar Mühendisliği (Lisans)</h4>
+                        <div
+                            class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white dark:border-dark bg-neutral-300 dark:bg-neutral-700 group-hover:bg-purple-600 transition-colors duration-300">
+                        </div>
+                        <span
+                            class="inline-block px-3 py-1 mb-2 text-xs font-bold text-purple-600 bg-purple-500/10 rounded-full font-mono">2017
+                            - 2021</span>
+                        <h4 class="text-xl font-bold">Bilgisayar Mühendisliği</h4>
                         <p class="text-sm font-medium text-neutral-500 mb-2">İstanbul Teknik Üniversitesi</p>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed" data-i18n="edu1_desc">3.50 GPA ile mezuniyet.</p>
-                    </div>
-                    <div class="relative pl-8 group">
-                        <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white dark:border-dark bg-neutral-300 dark:bg-neutral-700 group-hover:bg-purple-600 transition-colors duration-300"></div>
-                        <span class="inline-block px-3 py-1 mb-2 text-xs font-bold text-neutral-500 bg-neutral-100 dark:bg-neutral-800 rounded-full font-mono">2022</span>
-                        <h4 class="text-xl font-bold">Advanced React & Next.js</h4>
-                        <p class="text-sm font-medium text-neutral-500 mb-2" data-i18n="edu2_meta">Meta Sertifikası</p>
-                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed" data-i18n="edu2_desc">Modern frontend mimarisi eğitimi.</p>
                     </div>
                 </div>
             </div>
@@ -282,420 +280,157 @@
     </section>
 
     <!-- FOOTER -->
-    <!-- FOOTER (DÜZELTİLDİ: Z-Index ile Linkler Öne Getirildi) -->
     <footer class="relative pt-24 pb-12 border-neutral-200 dark:border-neutral-800 overflow-hidden">
-        
-        <!-- Arkaplan Dekoratif Işık (Tıklamayı engellememesi için pointer-events-none var) -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
-
-        <!-- İçerik Alanı (Z-Index 20 ile en üstte) -->
+        <div
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand/5 blur-[100px] rounded-full pointer-events-none z-0">
+        </div>
         <div class="max-w-7xl mx-auto px-6 relative z-20">
-            
-            <!-- Üst Kısım -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
                 <div class="space-y-6">
                     <a href="#" class="text-4xl font-black tracking-tighter hover:text-brand transition-colors">SLO.</a>
-                    <h2 class="text-3xl md:text-5xl font-bold leading-tight">
-                        <span data-i18n="footer_cta1">Bir sonraki projeni</span> <br>
-                        <span class="text-brand" data-i18n="footer_cta2">birlikte büyütelim.</span>
-                    </h2>
-                    <p class="text-neutral-500 dark:text-neutral-400 max-w-sm" data-i18n="footer_desc">
-                        Dijital dünyada iz bırakmak için modern tasarım ve güçlü kod yapısını birleştiriyorum.
-                    </p>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight">Bir sonraki projeni <br><span
+                            class="text-brand">birlikte büyütelim.</span></h2>
+                    <p class="text-neutral-500 dark:text-neutral-400 max-w-sm">Dijital dünyada iz bırakmak için modern
+                        tasarım ve güçlü kod yapısını birleştiriyorum.</p>
                     <div class="pt-4">
-                        <a href="mailto:contact@slo.com" class="inline-flex items-center gap-2 text-lg font-bold border-b-2 border-neutral-300 dark:border-neutral-700 hover:border-brand hover:text-brand transition-all pb-1">
-                            contact@slo.com <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                        <a href="mailto:contact@slo.com"
+                            class="inline-flex items-center gap-2 text-lg font-bold border-b-2 border-neutral-300 dark:border-neutral-700 hover:border-brand hover:text-brand transition-all pb-1">contact@slo.com
+                            <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
-
                 <div class="grid grid-cols-2 gap-8 md:pl-20">
                     <div>
-                        <h3 class="text-sm font-bold uppercase text-neutral-400 mb-6 tracking-widest" data-i18n="footer_menu">Menü</h3>
+                        <h3 class="text-sm font-bold uppercase text-neutral-400 mb-6 tracking-widest">Menü</h3>
                         <ul class="space-y-4 font-medium">
-                            <li><a href="#about" class="hover:text-brand transition-colors" data-i18n="nav_about">Hakkımda</a></li>
-                            <li><a href="#projects" class="hover:text-brand transition-colors" data-i18n="nav_projects">Projeler</a></li>
-                            <li><a href="#skills" class="hover:text-brand transition-colors" data-i18n="nav_skills">Yetenekler</a></li>
-                            <li><a href="#timeline" class="hover:text-brand transition-colors" data-i18n="nav_exp">Deneyim</a></li>
-                            <li><a href="contact.html" class="hover:text-brand transition-colors" data-i18n="nav_contact">İletişim</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-bold uppercase text-neutral-400 mb-6 tracking-widest" data-i18n="social">Sosyal</h3>
-                        <ul class="space-y-4 font-medium">
-                            <li><a href="https://github.com/sulooo71" target="_blank" class="flex items-center gap-2 hover:text-brand transition-colors"><i class="ri-github-fill text-xl"></i> GitHub</a></li>
-                            <li><a href="https://www.linkedin.com/in/s%C3%BCleyman-slo-28955a2b3/" target="_blank" class="flex items-center gap-2 hover:text-brand transition-colors"><i class="ri-linkedin-fill text-xl"></i> LinkedIn</a></li>
-                            <li><a href="https://twitter.com" target="_blank" class="flex items-center gap-2 hover:text-brand transition-colors"><i class="ri-twitter-x-line text-xl"></i> Twitter</a></li>
-                            <li><a href="https://instagram.com/sulo.zgrn6/" target="_blank" class="flex items-center gap-2 hover:text-brand transition-colors"><i class="ri-instagram-line text-xl"></i> Instagram</a></li>
+                            <li><a href="#about" class="hover:text-brand transition-colors">Hakkımda</a></li>
+                            <li><a href="#projects" class="hover:text-brand transition-colors">Projeler</a></li>
+                            <li><a href="#skills" class="hover:text-brand transition-colors">Yetenekler</a></li>
+                            <li><a href="#timeline" class="hover:text-brand transition-colors">Deneyim</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- Alt Kısım -->
-            <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-neutral-200 dark:border-neutral-800">
-                <p class="text-sm text-neutral-500 mb-4 md:mb-0">
-                    &copy; 2025 SLO. <span data-i18n="footer_rights">Tüm hakları saklıdır.</span> 
-                    <span class="hidden md:inline mx-2">|</span> 
-                    Designed with <span class="text-red-500">♥</span>
-                </p>
-                <button onclick="scrollToTop()" class="group flex items-center gap-2 text-sm font-bold bg-neutral-100 dark:bg-neutral-900 px-5 py-3 rounded-full hover:bg-brand hover:text-white transition-all duration-300">
-                    <span data-i18n="footer_up">Yukarı Dön</span>
-                    <i class="ri-arrow-up-line group-hover:-translate-y-1 transition-transform"></i>
+            <div
+                class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-neutral-200 dark:border-neutral-800">
+                <p class="text-sm text-neutral-500">&copy; 2025 SLO. Tüm hakları saklıdır.</p>
+                <button onclick="scrollToTop()"
+                    class="group flex items-center gap-2 text-sm font-bold bg-neutral-100 dark:bg-neutral-900 px-5 py-3 rounded-full hover:bg-brand hover:text-white transition-all duration-300">
+                    Yukarı Dön <i class="ri-arrow-up-line group-hover:-translate-y-1 transition-transform"></i>
                 </button>
             </div>
         </div>
     </footer>
 
-  <!-- COOKIE BANNER (RESPONSIVE & DÜZELTİLMİŞ) -->
-    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 z-[100] w-auto md:w-[300px] bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-2xl p-4 hidden transform transition-all duration-500 translate-y-20 opacity-0">
-        <div class="flex items-start gap-3">
-            <!-- İkon -->
-            <div class="p-2 bg-brand/10 rounded-lg text-brand shrink-0">
-                <i class="ri-cookie-2-fill text-xl"></i>
-            </div>
-            
-            <!-- İçerik -->
-            <div class="w-full">
-                <h4 class="font-bold text-sm mb-1" data-i18n="cookie_title">Çerez Politikası</h4>
-                <p class="text-xs text-neutral-500 dark:text-neutral-400 mb-3 leading-relaxed" data-i18n="cookie_desc">
-                    Deneyiminizi iyileştirmek için çerezleri kullanıyoruz.
-                </p>
-                
-                <!-- Butonlar -->
-                <div class="flex gap-2">
-                    <button id="accept-cookies" class="flex-1 bg-brand text-white py-1.5 rounded-md font-bold text-xs hover:bg-blue-700 transition" data-i18n="cookie_accept">Kabul Et</button>
-                    <button id="decline-cookies" class="flex-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 py-1.5 rounded-md font-bold text-xs hover:bg-neutral-200 dark:hover:bg-neutral-700 transition" data-i18n="cookie_decline">Reddet</button>
-                </div>    
-            </div>
-        </div>
-    </div>
-
     <!-- MODAL -->
-    <!-- MODAL (DÜZELTİLMİŞ) -->
-    <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4 mt-20">
-        
-        <!-- Arkaplan (Bulanık Siyah) -->
-        <div id="modal-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity opacity-0" onclick="closeModal()"></div>
-
-        <!-- Modal Kartı -->
-        <div id="modal-card" class="relative w-full max-w-3xl bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl transform scale-95 opacity-0 transition-all duration-300 overflow-hidden flex flex-col max-h-[90vh]">
-            
-            <!-- Kapat Butonu -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-red-500 transition">
-                <i class="ri-close-line text-xl"></i>
-            </button>
-
-            <!-- Resim Alanı -->
+    <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity opacity-0"
+            onclick="closeModal()"></div>
+        <div id="modal-card"
+            class="relative w-full max-w-3xl bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl transform scale-95 opacity-0 transition-all duration-300 overflow-hidden flex flex-col max-h-[90vh]">
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-red-500 transition"><i
+                    class="ri-close-line text-xl"></i></button>
             <div class="h-64 md:h-80 w-full bg-neutral-200 dark:bg-neutral-800 relative shrink-0">
-                <img id="modal-img" src="" alt="Project Cover" class="w-full h-full object-cover">
-                <!-- Resim Üzeri Gradyan -->
-                <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent opacity-80"></div>
+                <img id="modal-img" src="" class="w-full h-full object-cover">
                 <div class="absolute bottom-6 left-6 md:left-8">
-                    <span id="modal-date" class="text-brand font-mono text-sm bg-black/50 px-2 py-1 rounded backdrop-blur">2024</span>
-                    <h2 id="modal-title" class="text-3xl md:text-4xl font-bold text-white mt-2 shadow-sm">Proje Başlığı</h2>
+                    <span id="modal-date"
+                        class="text-brand font-mono text-sm bg-black/50 px-2 py-1 rounded backdrop-blur">2024</span>
+                    <h2 id="modal-title" class="text-3xl md:text-4xl font-bold text-white mt-2">Proje Başlığı</h2>
                 </div>
             </div>
-
-            <!-- İçerik Alanı -->
             <div class="p-8 overflow-y-auto">
-                <p id="modal-desc" class="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8">
-                    Açıklama buraya gelecek...
-                </p>
-
-                <!-- Alt Kısım (Footer) -->
-                <div class="flex md:flex-row items-center justify-between border-t border-neutral-200 dark:border-neutral-800 pt-6 gap-4">
-                    <div class="text-sm text-neutral-500 flex flex-col md:flex-row gap-1 md:gap-4 text-center md:text-left w-full md:w-auto">
-                        <p><span data-i18n="modal_author">Yapan</span>: <span class="text-neutral-900 dark:text-white font-bold">SLO</span></p>
-                    </div>
-
-                    <a id="modal-link" href="#" target="_blank" class="flex items-center justify-center gap-2 bg-brand text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg shadow-brand/20 w-full md:w-auto shrink-0">
-                        <span data-i18n="modal_btn">Siteyi Görüntüle</span> <i class="ri-external-link-line"></i>
-                    </a>
+                <p id="modal-desc" class="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8"></p>
+                <div class="flex items-center justify-between border-t border-neutral-200 dark:border-neutral-800 pt-6">
+                    <p class="text-sm text-neutral-500">Yapan: <span
+                            class="text-neutral-900 dark:text-white font-bold">SLO</span></p>
+                    <a id="modal-link" href="#" target="_blank"
+                        class="bg-brand text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">Siteyi
+                        Görüntüle <i class="ri-external-link-line"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SCRIPTS -->
     <script>
 
-            document.onkeydown = function(e) {
-            // F12 tuşu
-            if(e.keyCode == 123) {
-            return false;
-            }
-            // CTRL+I (İncele)
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-            return false;
-            }
-            // CTRL+J (Konsol)
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-            return false;
-            }
-            // CTRL+U (Kaynağı Görüntüle)
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-            return false;
-            }
-            // CTRL+S (Kaydet)
-            if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){ // Mac için event.metaKey de eklenebilir
-            return false;
-            }
-            }
-
-        document.addEventListener('contextmenu', event => {
-        event.preventDefault();
-        });
-        // --- 1. DİL DESTEĞİ & ÇEVİRİLER ---
-        const translations = {
-            tr: {
-                social: "Sosyal Medya",
-                p1b: "E-Ticaret Kontrol Paneli",
-                p1a: "React, Tailwind, Recharts kullanarak geliştirdiğim modern admin paneli.",
-                p2b: "Finans Uygulaması",
-                p2a: "Kişisel bütçe yönetimi için AI destekli modern arayüz.",
-                p3a: "Minimalist ve karanlık mod destekli kişisel web sitesi.",
-                p3b: "Portfolyo Taslak",
-                p4b: "Kurumsal Web",
-                p4a: "Lojistik firması için çok dilli kurumsal yapı.",
-                nav_about: "Hakkımda",
-                nav_projects: "Projelerim",
-                nav_skills: "Yetenekler",
-                nav_exp: "Deneyim",
-                nav_contact: "İletişim",
-                hero_title1: "DİJİTAL",
-                hero_title2: "MİMAR.",
-                hero_desc: "Merhaba, ben Süleyman. Karmaşık fikirleri minimalist ve işlevsel web deneyimlerine dönüştürüyorum.",
-                hero_btn: "Projelerimi İncele",
-                about_title: "Hakkımda",
-                about_desc: "Tasarım ve kodlama arasındaki boşluğu dolduruyorum. Her pikselin bir amacı olduğuna inanıyor, performans ve estetiği aynı potada eritiyorum.",
-                projects_title: "Bazı Projelerim",
-                projects_subtitle: "Detaylar için projelere tıklayın ↓",
-                btn_inspect: "İncele",
-                skills_title: "Yeteneklerim",
-                career_title: "Kariyerim",
-                job_title: "İş Deneyimi",
-                job1_date: "2023 - Günümüz",
-                job1_desc: "Büyük ölçekli web uygulamaları için performans optimizasyonu ve bileşen kütüphanesi liderliği.",
-                job2_desc: "Upwork üzerinden uluslararası müşterilere 30+ proje teslimi.",
-                job3_desc: "Kurumsal web sitelerinin arayüz kodlaması.",
-                edu_title: "Eğitim",
-                edu1_name: "Bilgisayar Mühendisliği (Lisans)",
-                edu1_desc: "3.50 GPA ile mezuniyet.",
-                edu2_meta: "Meta Sertifikası",
-                edu2_desc: "Modern frontend mimarisi eğitimi.",
-                footer_cta1: "Bir sonraki projeni",
-                footer_cta2: "birlikte büyütelim.",
-                footer_desc: "Dijital dünyada iz bırakmak için modern tasarım ve güçlü kod yapısını birleştiriyorum.",
-                footer_menu: "Menü",
-                footer_rights: "Tüm hakları saklıdır.",
-                footer_up: "Yukarı Dön",
-                cookie_title: "Çerez Politikası",
-                cookie_desc: "Deneyiminizi iyileştirmek için çerezleri kullanıyoruz. Devam ederek bunu kabul etmiş sayılırsınız.",
-                cookie_accept: "Kabul Et",
-                cookie_decline: "Reddet",
-                modal_author: "Yapan",
-                modal_btn: "Siteyi Görüntüle", 
-                modal_date: "Tarih"
-            },
-            en: {
-                social: "Social Media",
-                p1b: "E-Commerce Control Panel",
-                p1a: "Modern admin panel that I developed using React, Tailwind, Recharts.",
-                p2b: "Finance App",
-                p2a: "Modern AI-powered interface for personal budget management.",
-                p3a: "Minimalist and dark mode supported personal website.",
-                p3b: "Portfolio Template",
-                p4b: "Corporate Web",
-                p4a: "Multilingual corporate structure for a logistics company.",
-                nav_about: "About",
-                nav_projects: "My Projects",
-                nav_skills: "Skills",
-                nav_exp: "Experience",
-                nav_contact: "Contact",
-                hero_title1: "DIGITAL",
-                hero_title2: "ARCHITECT.",
-                hero_desc: "Hello, I'm Süleyman. I transform complex ideas into minimalist and functional web experiences.",
-                hero_btn: "View My Work",
-                about_title: "About Me",
-                about_desc: "I bridge the gap between design and coding. I believe every pixel has a purpose, blending performance and aesthetics.",
-                projects_title: "My Featured Projects",
-                projects_subtitle: "Click projects for details ↓",
-                btn_inspect: "Inspect",
-                skills_title: "My Skills",
-                career_title: "My Career",
-                job_title: "Work Experience",
-                job1_date: "2023 - Present",
-                job1_desc: "Leading performance optimization and component library development for large-scale web apps.",
-                job2_desc: "Delivered 30+ projects to international clients via Upwork.",
-                job3_desc: "Interface coding for corporate websites.",
-                edu_title: "Education",
-                edu1_name: "Computer Engineering (B.Sc.)",
-                edu1_desc: "Graduated with 3.50 GPA.",
-                edu2_meta: "Meta Certificate",
-                edu2_desc: "Advanced training on modern frontend architecture.",
-                footer_cta1: "Let's grow your",
-                footer_cta2: "next project together.",
-                footer_desc: "I combine modern design and strong code structure to leave a mark in the digital world.",
-                footer_menu: "Menu",
-                footer_rights: "All rights reserved.",
-                footer_up: "Back to Top",
-                cookie_title: "Cookie Policy",
-                cookie_desc: "We use cookies to improve your experience. By continuing, you agree to our policy.",
-                cookie_accept: "Accept",
-                cookie_decline: "Decline",
-                modal_author: "Author",
-                modal_btn: "View Site", 
-                modal_date: "Date"
-            }
-        };
-
-        const langToggleBtn = document.getElementById('lang-toggle');
-        let currentLang = localStorage.getItem('lang') || 'tr';
-
-        function updateLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.innerText = translations[lang][key];
-                }
-            });
-            langToggleBtn.innerText = lang === 'tr' ? 'EN' : 'TR'; // Butonda diğer dil yazsın
-            localStorage.setItem('lang', lang);
-        }
-
-        // İlk yüklemede dili ayarla
-        updateLanguage(currentLang);
-
-        langToggleBtn.addEventListener('click', () => {
-            currentLang = currentLang === 'tr' ? 'en' : 'tr';
-            updateLanguage(currentLang);
-        });
-
-        // --- 2. ÇEREZ (COOKIE) BİLDİRİMİ ---
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptBtn = document.getElementById('accept-cookies');
-        const declineBtn = document.getElementById('decline-cookies');
-
-        // Çerez tercihi daha önce yapılmamışsa göster
-        if (!localStorage.getItem('cookieConsent')) {
-            cookieBanner.classList.remove('hidden');
-            setTimeout(() => {
-                cookieBanner.classList.remove('translate-y-20', 'opacity-0');
-            }, 1000); // 1 saniye sonra animasyonla gelsin
-        }
-
-        acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'accepted');
-            closeBanner();
-        });
-
-        declineBtn.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'declined');
-            closeBanner();
-        });
-
-        function closeBanner() {
-            cookieBanner.classList.add('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                cookieBanner.classList.add('hidden');
-            }, 500);
-        }
-
-        // --- 3. DİĞER SCRIPTLER (Menü, Tema, Modal) ---
-        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        let isMenuOpen = false;
-
-        function toggleMenu() {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
-                mobileMenu.classList.remove('translate-x-full');
-                menuIcon.classList.replace('ri-menu-4-line', 'ri-close-large-line');
-                document.body.classList.add('overflow-hidden-important');
-            } else {
-                mobileMenu.classList.add('translate-x-full');
-                menuIcon.classList.replace('ri-close-large-line', 'ri-menu-4-line');
-                document.body.classList.remove('overflow-hidden-important');
-            }
-        }
-        menuBtn.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', () => { if(isMenuOpen) toggleMenu(); }));
-
-        
-        const themeToggleBtn = document.getElementById('theme-toggle');
+        // --- TEMA YÖNETİMİ (SAYFA YÜKLENDİĞİNDE) ---
         const htmlElement = document.documentElement;
+
+        // 1. Sayfa yüklendiğinde hafızadaki temayı uygula
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             htmlElement.classList.add('dark');
         } else {
             htmlElement.classList.remove('dark');
         }
-        themeToggleBtn.addEventListener('click', () => {
-            htmlElement.classList.toggle('dark');
-            localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
+
+        // --- TÜM EVENTLER (DOM YÜKLENDİKTEN SONRA) ---
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // TEMA DEĞİŞTİRME BUTONU
+            const themeToggleBtn = document.getElementById('theme-toggle');
+
+            themeToggleBtn.addEventListener('click', () => {
+                // 'dark' sınıfı varsa çıkar, yoksa ekle
+                if (htmlElement.classList.contains('dark')) {
+                    htmlElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+
+            // MOBİL MENÜ MANTIĞI
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            let isMenuOpen = false;
+
+            menuBtn.addEventListener('click', () => {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuIcon.classList.replace('ri-menu-4-line', 'ri-close-line');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.classList.replace('ri-close-line', 'ri-menu-4-line');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // MODAL MANTIĞI (Pencere dışı tıklama dahil)
+            window.openModal = function (title, date, imgSrc, desc, linkUrl) {
+                const modal = document.getElementById('project-modal');
+                document.getElementById('modal-title').innerText = title;
+                document.getElementById('modal-date').innerText = date;
+                document.getElementById('modal-img').src = imgSrc;
+                document.getElementById('modal-desc').innerText = desc;
+                document.getElementById('modal-link').href = linkUrl;
+
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('modal-backdrop').classList.remove('opacity-0');
+                    document.getElementById('modal-card').classList.remove('scale-95', 'opacity-0');
+                    document.getElementById('modal-card').classList.add('scale-100', 'opacity-100');
+                }, 50);
+            };
+
+            window.closeModal = function () {
+                document.getElementById('modal-backdrop').classList.add('opacity-0');
+                document.getElementById('modal-card').classList.remove('scale-100', 'opacity-100');
+                document.getElementById('modal-card').classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    document.getElementById('project-modal').classList.add('hidden');
+                }, 300);
+            };
         });
 
-        const modal = document.getElementById('project-modal');
-        const modalBackdrop = document.getElementById('modal-backdrop');
-        const modalCard = document.getElementById('modal-card');
-        const mTitle = document.getElementById('modal-title');
-        const mDate = document.getElementById('modal-date');
-        const mImg = document.getElementById('modal-img');
-        const mDesc = document.getElementById('modal-desc');
-        const mLink = document.getElementById('modal-link');
-
-        function openModal(title, date, imgSrc, desc, linkUrl) {
-            mTitle.innerText = title;
-            mDate.innerText = date;
-            mImg.src = imgSrc;
-            mDesc.innerText = desc;
-            mLink.href = linkUrl;
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modalBackdrop.classList.remove('opacity-0');
-                modalCard.classList.remove('scale-95', 'opacity-0');
-                modalCard.classList.add('scale-100', 'opacity-100');
-            }, 50);
+        // Yukarı dön butonu için fonksiyon
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        function closeModal() {
-            modalBackdrop.classList.add('opacity-0');
-            modalCard.classList.remove('scale-100', 'opacity-100');
-            modalCard.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-    
-    if (isMenuOpen) {
-        // 1. Menüyü Ekrana Getir
-        mobileMenu.classList.remove('translate-x-full');
-        
-        // 2. İkonu SİL ve yerine ÇARPI (X) koy
-        menuIcon.classList.remove('ri-menu-4-line');
-        menuIcon.classList.add('ri-close-line');
-        
-        // 3. Sayfa kaydırmayı kilitle
-        document.body.style.overflow = 'hidden';
-    } else {
-        // 1. Menüyü Gizle
-        mobileMenu.classList.add('translate-x-full');
-        
-        // 2. İkonu SİL ve yerine MENÜ koy
-        menuIcon.classList.remove('ri-close-line');
-        menuIcon.classList.add('ri-menu-4-line');
-        
-        // 3. Sayfa kaydırmayı aç
-        document.body.style.overflow = 'auto';
-    }
-}
-
     </script>
 </body>
+
 </html>
